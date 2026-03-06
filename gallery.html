@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gallery</title>
     <style>
-     .gallery{
-        padding: 80px;
-        background: #f9f9f9;
-        text-align: center;
-     }
-     .gallery h2{
-    font-size:32px;
-    margin-bottom:40px;
+     .gallery {
+  padding: 20px;
+  text-align: center;
 }
 
-
-.gallery-contaner{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 صور بس */
-    gap:25px;
+.gallery h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-.gallery-contaner img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:0.4s;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.gallery-contaner {
+  display: flex;
+  flex-wrap: wrap;       /* يسمح للصور بالانتقال للسطر التالي */
+  gap: 10px;             /* مسافة بين الصور */
+  justify-content: center;
 }
 
-.gallery-contaner img:hover{
-    transform:scale(1.05);
+.gallery-contaner img {
+  width: 30%;             /* 3 صور في الصف تقريبا */
+  object-fit: cover;       /* يحافظ على تناسب الصورة */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-contaner img:hover {
+  transform: scale(1.05); /* تأثير تكبير بسيط عند المرور */
+}
+
+/* Media Query للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .gallery-contaner img {
+    width: 100%;           /* صورة واحدة في كل صف */
+  }
 }
     </style>
 
