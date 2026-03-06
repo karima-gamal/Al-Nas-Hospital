@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Nas Hospital</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+.hero {  
+    width: 100%;  
+    height: 100vh; /* يغطي الشاشة كاملة */  
+    background-image: url('imges/potfile.jpg'); /* حطي الصورة في نفس الفولدر */  
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    display: flex;  
+    align-items: center;  
+    justify-content: flex-start;  
+    padding-left: 80px;  
+    color: white;  
+    position: relative;  
+    overflow: hidden;
+}
+
+/* Overlay */
+.hero::after {  
+    content: '';  
+    position: absolute;  
+    top:0; left:0;  
+    width:100%; height:100%;  
+    background-color: rgba(0,0,0,0.4);  
+    z-index:1;  
+}
+
+/* محتوى النص */
+.hero-content{  
+    position: relative;  
+    z-index:2;  
+    max-width:500px;  
+    opacity: 0;  /* لتأثير Fade-in */  
+    transform: translateY(30px);  
+    animation: fadeIn 1.5s forwards;  
+}
+
+.hero-content h1{  
+    font-size: 48px;  
+    margin-bottom:20px;  
+}
+
+.hero-content p{  
+    font-size: 18px;  
+    margin-bottom:30px;  
+    line-height:1.5;  
+}
+
+.hero-content button{  
+    padding:12px 30px;  
+    background-color:#1abc9c;  
+    border:none;  
+    border-radius:8px;  
+    color:white;  
+    font-size:16px;  
+    cursor:pointer;  
+    transition:0.4s;  
+}
+
+.hero-content button:hover{  
+    background-color:#16a085;  
+    transform: scale(1.05); /* زرار متحرك */  
+}
+
+/* Animation */
+@keyframes fadeIn {
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width:768px) {  
+    .hero {
+        flex-direction: column;  
+        justify-content: center;  
+        padding:40px 20px;  
+        text-align:center;  
+    }  
+
+    .hero-content h1 {  
+        font-size:32px;  
+    }  
+
+    .hero-content p {  
+        font-size:16px;  
+    }  
+
+    .hero-content button {  
+        padding:10px 25px;  
+    }  
+}
+
+    /* الـ Hero Section */
+
+</style>
+     
+</head>
+<body>
+  <!--top-bar -->
+  <div class="top-bar">
+    <div>
+        Email:alnashospital019@gmail.com
+    </div>
+    <div>
+        contact:16441
+    </div>
+  </div>
+    
+       <nav class="navbar">
+    <ul class="menu">
+        <li class="dropdown">
+            <a href="#">HOME ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home Default</a></li>
+                <li><a href="homeslider.html" target="_blank">Home Slider</a></li>
+                <li><a href="#">Landing Page</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown"><a href="#">Page  ▾</a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Department</a></li>
+            <li><a href="#">Appointment</a></li>
+            <li><a href="#">Doctor</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="gallery.html" target="_blank">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+<button class="btn-appoint">
+   <a href="appointment.html" target="_blank" style="color: white; text-decoration: none;"> Appointment</a> 
+</button>
+
+     </nav>
+    
+
+
+
+<section class="hero">      
+    <div class="hero-content">
+        <h1>We Protect You & Your Family Members</h1>  
+        <p>We provide high quality healthcare with professional doctors and modern equipment to ensure the best treatment experience.</p>  
+        <button>Register Now</button>  
+    </div>  
+</section>
+ 
+<!-- welcome meesage -->
+       <section class="welcome">
+
+    <div class="welcome-text">
+        <h2>Welcome To Our Medical Services</h2>
+        <p>
+            We provide high quality healthcare with professional doctors and
+            advanced medical equipment to ensure the best treatment experience.
+        </p>
+       <a href=""> <button>Read More</button></a>
+    </div>
+
+    <div class="welcome-images">
+        <div class="top-images">
+            <img src="imges/WhatsApp Image 2026-03-03 at 2.13.07 AM.jpeg" alt="">
+            <img src="imges/WhatsApp Image 2026-03-03 at 2.13.07 AM (1).jpeg" alt="">
+        </div>
+
+        <div class="bottom-image">
+            <img src="imges/WhatsApp Image 2026-03-03 at 2.13.07 AM (2).jpeg" alt="">
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
