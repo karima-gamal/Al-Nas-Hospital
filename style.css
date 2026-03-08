@@ -15,99 +15,89 @@
     font-size:14px;
 }
 
-/* Navbar */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-}
-.menu{
-   list-style: none;
-   display:flex;
-   gap: 40px;
 
-}
-.menu li{
-   position: relative;
-}
- 
-.menu a {
-   text-decoration: none;
-   color: black;
-   font-weight: 500;
+
+header{
+background:#fff;
+padding:15px 40px;
 }
 
-
-.dropdown-menu {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    background: white;
-    width: 220px;
-    padding: 10px 0;
-    border-radius: 12px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    margin: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
+.nav-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
-/* السهم الصغير */
-.dropdown-menu::before{
-    content:"";
-    position:absolute;
-    top:-8px;
-    left:25px;
-    width:15px;
-    height:15px;
-    background:white;
-    transform:rotate(45deg);
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
 }
 
-
-/* عناصر القائمة */
-.dropdown-menu li{
-    padding:12px 25px;
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
-.dropdown-menu li a{
-    color:#333;
+.appointment-btn{
+background:#2bbbad;
+border:none;
+color:#fff;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
 }
 
-
-.dropdown-menu li:hover {
-    background: #f0f0f0;
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
 }
 
-/* لما نعمل Hover */
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
+/* موبايل */
+
+@media (max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#fff;
+text-align:center;
+padding:20px 0;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.appointment-btn{
+display:none;
+}
 
 }
 
-.navbar ul li{
-    cursor:pointer;
+.nav-links a{
+color:#333;
+text-decoration:none;
+padding:5px;
 }
 
-.logo{
-    font-weight:bold;
-    font-size:22px;
+.nav-links a.active{
+color:#2bbbad;
+font-weight:bold;
 }
 
-.btn-appoint{
-    background:#27c1b9;
-    border:none;
-    padding:10px 20px;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-}
 
-/* Hero Section */
- 
+
 
 /* welcome message */
 .welcome{
@@ -160,15 +150,78 @@
 }
 
 .top-images img{
-    width:50%;
-    height:300px;
-    object-fit:cover;
-    border-radius:15px;
+    width:100%;
+    height:auto;
+    max-width: 200px;
+    border-radius:20px;
 }
 
 .bottom-image img{
     width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:15px;
+    height:auto;
+    max-width: 200px;
+    border-radius:20px;
+}
+ 
+  
+@media (max-width:768px){
+
+.welcome-images{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.welcome-images img{
+    max-width:120px;
+}
+
+}
+
+.contact{
+padding:60px 20px;
+text-align:center;
+background:#f9f9f9;
+}
+
+.contact h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.contact-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.contact-info{
+max-width:250px;
+text-align:left;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+width:300px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.contact-form button{
+background:#2bbbad;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
 }

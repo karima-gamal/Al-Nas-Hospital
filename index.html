@@ -115,51 +115,47 @@
     </div>
   </div>
     
-       <nav class="navbar">
-    <ul class="menu">
-        <li class="dropdown">
-            <a href="#">HOME ▾</a>
-            <ul class="dropdown-menu">
-                <li><a href="index.html">Home Default</a></li>
-                <li><a href="homeslider.html" target="_blank">Home Slider</a></li>
-                <li><a href="#">Landing Page</a></li>
-            </ul>
-        </li>
 
-        <li class="dropdown"><a href="#">Page  ▾</a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Department</a></li>
-            <li><a href="#">Appointment</a></li>
-            <li><a href="#">Doctor</a></li>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Contact</a></li>
+<header>
 
-        </ul>
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="gallery.html" target="_blank">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-<button class="btn-appoint">
-   <a href="appointment.html" target="_blank" style="color: white; text-decoration: none;"> Appointment</a> 
-</button>
+<div class="nav-container">
 
-     </nav>
-    
+<h2 class="logo">Medical</h2>
 
+<nav>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#About">About</a></li>
+<li><a href="gallery.html" target="_blank">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
+<button class="appointment-btn">
+    <a href="appointment.html" target="_blank" style="color: white; text-decoration: none;">Appointment</a>
+    </button>
 
-<section class="hero">      
+<div class="menu-toggle">
+☰
+</div>
+
+</div>
+
+</header>
+
+<section class="hero" id="home">      
     <div class="hero-content">
         <h1>We Protect You & Your Family Members</h1>  
         <p>We provide high quality healthcare with professional doctors and modern equipment to ensure the best treatment experience.</p>  
-        <button>Register Now</button>  
+        <!-- <button>Register Now</button>   -->
+         <button class="btn-appoint">
+   <a href="appointment.html" target="_blank" style="color: white; text-decoration: none;"> Register Now</a> 
+</button>
     </div>  
 </section>
  
 <!-- welcome meesage -->
-       <section class="welcome">
+       <section class="welcome" id="About">
 
     <div class="welcome-text">
         <h2>Welcome To Our Medical Services</h2>
@@ -167,10 +163,10 @@
             We provide high quality healthcare with professional doctors and
             advanced medical equipment to ensure the best treatment experience.
         </p>
-       <a href=""> <button>Read More</button></a>
-    </div>
+       <a href="https://alnas-hospital.com/ar/help" target="_blank"> <button>Read More</button></a>
+    </div> 
 
-    <div class="welcome-images">
+     <div class="welcome-images">
         <div class="top-images">
             <img src="imges/WhatsApp Image 2026-03-03 at 2.13.07 AM.jpeg" alt="">
             <img src="imges/WhatsApp Image 2026-03-03 at 2.13.07 AM (1).jpeg" alt="">
@@ -180,7 +176,80 @@
             <img src="imges/WhatsApp Image 2026-03-03 at 2.13.07 AM (2).jpeg" alt="">
         </div>
     </div>
+       
+
 
 </section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+<p>Feel free to contact us anytime</p>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<p><strong>Phone:</strong> 16441</p><br>
+<p><strong>Email:</strong> alnashospital019@gmail.com</p><br>
+<p><strong>Address:</strong> cairo, Egypt</p>
+
+</div>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+   <script>
+
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll(".nav-links a");
+
+window.onscroll = () => {
+
+sections.forEach(sec => {
+
+let top = window.scrollY;
+let offset = sec.offsetTop - 100;
+let height = sec.offsetHeight;
+let id = sec.getAttribute("id");
+
+if(top >= offset && top < offset + height){
+
+navLinks.forEach(links => {
+links.classList.remove("active");
+document.querySelector('.nav-links a[href*=' + id + ']').classList.add("active");
+});
+
+}
+
+});
+
+};
+
+</script>
+
 </body>
 </html>
