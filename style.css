@@ -22,7 +22,7 @@ background:#fff;
 padding:15px 40px;
 }
 
-.nav-container{
+/* .nav-container{
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -53,48 +53,70 @@ cursor:pointer;
 display:none;
 font-size:28px;
 cursor:pointer;
+} */
+
+ .navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:white;
+position:relative;
 }
 
-/* موبايل */
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+transition: 0.3s;
+}
+
+.nav-links a{
+text-decoration:none;
+color:black;
+font-size:18px;
+}
+
+.menu-icon{
+font-size:28px;
+cursor:pointer;
+display:none;
+}
+
+/* Mobile */
 
 @media (max-width:768px){
+
+.menu-icon{
+display:block;
+}
 
 .nav-links{
 display:none;
 flex-direction:column;
 position:absolute;
 top:70px;
-left:0;
-width:100%;
-background:#fff;
-text-align:center;
-padding:20px 0;
+right:20px;
+background:white;
+width:200px;
+padding:20px;
+z-index:1000;
 }
 
 .nav-links.active{
 display:flex;
 }
 
-.menu-toggle{
-display:block;
 }
 
-.appointment-btn{
-display:none;
-}
+ 
 
-}
-
-.nav-links a{
-color:#333;
-text-decoration:none;
-padding:5px;
-}
-
-.nav-links a.active{
-color:#2bbbad;
-font-weight:bold;
-}
+ 
 
 
 

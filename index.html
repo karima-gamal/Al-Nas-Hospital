@@ -118,9 +118,9 @@
 
 <header>
 
-<div class="nav-container">
+<!-- <div class="nav-container">
 
-<h2 class="logo">Medical</h2>
+<h2 class="logo">Hospital</h2>
 
 <nav>
 <ul class="nav-links">
@@ -139,7 +139,24 @@
 ☰
 </div>
 
+</div> -->
+
+ <nav class="navbar">
+
+<div class="logo">Hospital</div>
+
+<div class="menu-icon" onclick="toggleMenu()">
+☰
 </div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#About">about</a></li>
+<li><a href="gallery.html" target="_blank">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
 
 </header>
 
@@ -155,7 +172,7 @@
 </section>
  
 <!-- welcome meesage -->
-       <section class="welcome" id="About">
+       <section class="welcome" id="about">
 
     <div class="welcome-text">
         <h2>Welcome To Our Medical Services</h2>
@@ -212,13 +229,6 @@
 
 </section>
 
-
-
-
-
-
-
-
     <script src="script.js"></script>
 
 
@@ -248,6 +258,22 @@ document.querySelector('.nav-links a[href*=' + id + ']').classList.add("active")
 });
 
 };
+
+</script>
+
+<!-- java -->
+
+<script>
+
+let menu = document.getElementById("navLinks");
+
+function toggleMenu(){
+    if(menu.style.display === "flex"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "flex";
+    }
+}
 
 </script>
 
